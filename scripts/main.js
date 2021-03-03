@@ -1,39 +1,39 @@
 ;(function($){
     $(function (){
-        // Toggle mobile-menu
-        $('header label').on('click', function () {
-            $('nav').toggleClass('nav__list');
-        });
-        //Hide toggle-menu
-        $('nav a').on('click', function (){
-            $('nav').toggleClass('nav__list');
-            $('#hamburger').prop('checked', false);
-        });
-        //
+        // // Toggle mobile-menu
+        // $('header label').on('click', function () {
+        //     $('nav').toggleClass('nav__list');
+        // });
+        // //Hide toggle-menu
+        // $('nav a').on('click', function (){
+        //     $('nav').toggleClass('nav__list');
+        //     $('#hamburger').prop('checked', false);
+        // });
+        // //
         //Slick-slider
-        $('.reviews__slick').slick({
+        $('.represent__slider').slick({
             autoplay:true,
             autoplaySpeed: 5000,
             arrows:true,
             dots: false,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            responsive: [{
-                breakpoint: 1250,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    arrows: false
-                }
-                },
-                {
-                    breakpoint: 900,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false
-                    }
-            }]
+            slidesToShow: 1,
+            slidesToScroll: 1
+            // responsive: [{
+            //     breakpoint: 1250,
+            //     settings: {
+            //         slidesToShow: 2,
+            //         slidesToScroll: 1,
+            //         arrows: false
+            //     }
+            //     },
+            //     {
+            //         breakpoint: 900,
+            //         settings: {
+            //             slidesToShow: 1,
+            //             slidesToScroll: 1,
+            //             arrows: false
+            //         }
+            // }]
         });
         //
         //smooth scrolling

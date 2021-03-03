@@ -43,6 +43,37 @@ body {
   width: 100%;
 }
 
+.represent__slider div {
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.represent__slider div h2, .represent__slider div p {
+  text-align: center;
+  font-weight: 300;
+}
+.represent__slider div h2 {
+  font-size: 48px;
+  color: white;
+  background: black;
+  letter-spacing: 0.1em;
+  width: 600px;
+  margin: 0 auto;
+}
+.represent__slider div p {
+  font-size: 18px;
+  color: black;
+  letter-spacing: 0.4em;
+}
+.represent__slider div:nth-child(1) {
+  background-image: url("../img/represent-1.jpg");
+}
+.represent__slider div:nth-child(2) {
+  background-image: url("../img/represent-2.jpg");
+}
+
 .bar {
   height: 120px;
   display: flex;
