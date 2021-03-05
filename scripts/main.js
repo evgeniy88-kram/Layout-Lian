@@ -12,10 +12,10 @@
         // //
         //Slick-slider
         $('.represent__slider').slick({
-            autoplay:true,
-            autoplaySpeed: 5000,
+            // autoplay:true,
+            // autoplaySpeed: 5000,
             arrows:true,
-            dots: false,
+            dots: true,
             slidesToShow: 1,
             slidesToScroll: 1
             // responsive: [{

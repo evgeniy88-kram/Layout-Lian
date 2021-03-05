@@ -10,9 +10,9 @@
 $slick-font-path: "../fonts/" !default;
 $slick-font-family: "slick" !default;
 $slick-loader-path: "../img/" !default;
-$slick-arrow-color: #75B534 !default;
-$slick-dot-color: #6d6d6d !default;
-$slick-dot-color-active: #00D2D2 !default;
+$slick-arrow-color: #000000 !default;
+$slick-dot-color: #ffffff !default;
+$slick-dot-color-active: #000000 !default;
 $slick-prev-character: "\2190" !default;
 $slick-next-character: "\2192" !default;
 $slick-dot-character: "\2022" !default;
@@ -63,6 +63,7 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-prev,
 .slick-next {
     position: absolute;
+    z-index: 100;
     display: block;
     height: 20px;
     width: 20px;
@@ -101,10 +102,10 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-    left: -60px;
+    left: 30px;
     [dir="rtl"] & {
         right: auto;
-        left: -60px;
+        left: 30px;
     }
     &:before {
         content: $slick-prev-character;
@@ -115,9 +116,9 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-next {
-    right: -25px;
+    right: 60px;
     [dir="rtl"] & {
-        left: -25px;
+        left: 60px;
         right: auto;
     }
     &:before {
@@ -136,7 +137,7 @@ $slick-opacity-not-active: 0.25 !default;
 
 .slick-dots {
     position: absolute;
-    bottom: -25px;
+    bottom: 60px;
     list-style: none;
     display: block;
     text-align: center;
@@ -181,7 +182,7 @@ $slick-opacity-not-active: 0.25 !default;
                 line-height: 20px;
                 text-align: center;
                 color: $slick-dot-color;
-                opacity: $slick-opacity-not-active;
+                //opacity: $slick-opacity-not-active;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
             }

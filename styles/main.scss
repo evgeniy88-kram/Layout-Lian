@@ -15,7 +15,7 @@ body {
     align-items: center;
     width: 1140px;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 30px;
     &__nav {
       nav {
         display: flex;
@@ -47,35 +47,35 @@ body {
 }
 .represent {
   &__slider {
-    div {
-      height: 650px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+    &--item {
+      width: 1600px;
       h2, p {
         text-align: center;
         font-weight: 300;
+        text-transform: uppercase;
       }
       h2 {
         font-size: 48px;
         color: white;
         background: black;
         letter-spacing: .1em;
-        width: 600px;
-        margin: 0 auto;
+        width: 700px;
+        margin: 260px auto 35px;
       }
       p {
         font-size: 18px;
         color: black;
         letter-spacing: .4em;
+        margin: 0;
       }
     }
     div:nth-child(1) {
-      background-image: url("../img/represent-1.jpg");
+      background: url("../img/represent-1.jpg");
+      height: 650px;
     }
     div:nth-child(2) {
-      background-image: url("../img/represent-2.jpg");
+      background: url("../img/represent-2.jpg");
+      height: 650px;
     }
   }
 }
@@ -218,6 +218,139 @@ body {
     transition: all .5s ease-in-out;
   }
 }
+.welcome {
+  &__content {
+    background: url("../img/welcome_bg.jpg");
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h2, p {
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 48px;
+      color: white;
+      background: black;
+      letter-spacing: .1em;
+      width: 700px;
+      text-align: center;
+      margin: 0 0 0 230px;
+    }
+    p {
+      font-size: 18px;
+      color: black;
+      letter-spacing: .4em;
+      margin: 40px 0 0 230px;
+    }
+  }
+
+}
+.story {
+  &__content {
+    width: 1140px;
+    height: 600px;
+    margin: 0 auto 25px;
+    padding-top: 70px;
+    display: flex;
+    &__left {
+      background: url("../img/story.jpg");
+      width: 530px;
+      height: 600px;
+      margin-right: 50px;
+    }
+    &__right {
+      width: 560px;
+      h3 {
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: .4em;
+        margin: 8px 0 40px;
+        text-transform: uppercase;
+      }
+      p {
+        font-weight: 300;
+        font-size: 14px;
+        margin: 0 0 40px;
+      }
+      &__details {
+        h4 {
+        font-weight: 700;
+        font-size: 16px;
+        margin: 30px 0 15px;
+      }
+        &__item {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+          background: #DADADA;
+          height: 10px;
+          position: relative;
+          div:nth-child(1) {
+            height: 0;
+            border: 2px solid #000000;
+          }
+          div:nth-child(2) {
+            width: 4px;
+            height: 4px;
+            border: 3px solid #000000;
+            border-radius: 50%;
+          }
+          #perc-1 {
+            width: 495px;
+          }
+          #perc-2 {
+            width: 523px;
+          }
+          #perc-3 {
+            width: 275px;
+          }
+          #perc-4 {
+            width: 468px;
+          }
+          div:nth-child(3) {
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            background: #000000;
+            top: -35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 400;
+            &:before {
+              content: "";
+              width: 0;
+              height: 0;
+              position: absolute;
+              right: 31px;
+              top: 20px;
+              border-right: 9px solid #000000;
+              border-bottom: 9px solid transparent;
+              transform: rotate(-90deg);
+            }
+          }
+          #perc-1-1 {
+            left: 503px;
+          }
+          #perc-1-2 {
+            left: 531px;
+          }
+          #perc-1-3 {
+            left: 283px;
+          }
+          #perc-1-4 {
+            left: 476px;
+          }
+        }
+      }
+    }
+  }
+}
 .footer {
   height: 250px;
   background: #DADADA;
@@ -230,7 +363,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 40px auto;
+    margin: 40px auto 35px;
     width: 1140px;
     border-top: 1px solid #959595;
     border-bottom: 1px solid #959595;
@@ -246,5 +379,6 @@ body {
   p {
     text-align: center;
     font-weight: 700;
+    margin: 0;
   }
 }
