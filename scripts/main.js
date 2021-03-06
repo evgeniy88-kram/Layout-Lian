@@ -11,7 +11,7 @@
         // });
         // //
         //Slick-slider
-        $('.represent__slider').slick({
+        $('.main-represent__slider').slick({
             // autoplay:true,
             // autoplaySpeed: 5000,
             arrows:true,
