@@ -45,4 +45,24 @@
         //
     });
 })(jQuery);
-
+// Карта Google
+function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 11.25,
+        center: { lat: 48.73161, lng: 37.61589 },
+    });
+    const mark = new google.maps.Marker({
+        position: { lat: 48.7343469, lng: 37.597213 },
+        map,
+        title: "STIHL",
+        animation: google.maps.Animation.BOUNCE
+    });
+    const popUpContent = "Адрес: г.Краматорск, ул.Дворцовая, 100";
+    console.log(popUpContent);
+    const infoWindow = new google.maps.InfoWindow({
+        content: popUpContent,
+    });
+    mark.addListener("click", () => {
+        infoWindow.open(map, mark);
+    });
+}
