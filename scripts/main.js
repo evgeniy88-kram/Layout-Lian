@@ -35,20 +35,15 @@
             //         }
             // }]
         });
-        //
 
-    });
-})(jQuery);
-
-;(function(){
-    let portfolioSlide1 = document.getElementById('portfolioSlide1'),
-        portfolioSlide2 = document.getElementById('portfolioSlide2'),
-        previousMenu = document.getElementById('left'),
-        nextMenu = document.getElementById('right'),
-        navigation = [nextMenu, previousMenu],
-        j = 1,
-        shareBtn = document.getElementsByClassName('portfolio__details__item__text__share'),
-        shareIcons = document.getElementsByClassName('shared-icons')    ;
+        let portfolioSlide1 = document.getElementById('portfolioSlide1'),
+            portfolioSlide2 = document.getElementById('portfolioSlide2'),
+            previousMenu = document.getElementById('left'),
+            nextMenu = document.getElementById('right'),
+            navigation = [nextMenu, previousMenu],
+            j = 1,
+            shareBtn = document.getElementsByClassName('portfolio__details__item__text__share'),
+            shareIcons = document.getElementsByClassName('shared-icons')    ;
         for (let i = 0; i < 2; i++) {
             navigation[i].addEventListener('click', function () {
                 j++;
@@ -66,7 +61,10 @@
             });
         }
 
-})();
+    });
+})(jQuery);
+
+
 
 
         // Карта Google

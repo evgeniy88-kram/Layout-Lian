@@ -4,6 +4,10 @@
   align-items: center;
   justify-content: center;
 }
+@mixin flexSpaceBetw() {
+  display: flex;
+  justify-content: space-between;
+}
 @mixin font300-14 {
   font-weight: 300;
   font-size: 14px;
@@ -17,8 +21,7 @@ body {
 .header {
   height: 90px;
   &__container {
-    display: flex;
-    justify-content: space-between;
+    @include flexSpaceBetw;
     align-items: center;
     width: 1140px;
     margin: 0 auto;
@@ -116,9 +119,8 @@ body {
   &__content {
     @include flexCentrCentr;
     &__left {
-      display: flex;
+      @include flexSpaceBetw;
       flex-direction: column;
-      justify-content: space-between;
       height: 1115px;
       div {
         width: 360px;
@@ -142,9 +144,8 @@ body {
       }
     }
     &__center {
-      display: flex;
+      @include flexSpaceBetw;
       flex-direction: column;
-      justify-content: space-between;
       height: 1300px;
       margin: 0 30px;
       div {
@@ -173,9 +174,8 @@ body {
       }
     }
     &__right {
-      display: flex;
+      @include flexSpaceBetw;
       flex-direction: column;
-      justify-content: space-between;
       height: 1115px;
       div {
         width: 360px;
@@ -370,8 +370,7 @@ body {
   }
   &__content {
     width: 1140px;
-    display: flex;
-    justify-content: space-between;
+    @include flexSpaceBetw;
     &__item {
       background: white;
       width: 360px;
@@ -475,8 +474,7 @@ body {
     width: 1140px;
     height: 700px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    @include flexSpaceBetw;
     &__text {
       width: 550px;
       h3 {
@@ -526,8 +524,7 @@ body {
         margin: 0;
       }
       &__share {
-        display: flex;
-        justify-content: space-between;
+        @include flexSpaceBetw;
         width: 385px;
         height: 42px;
         margin: 55px 0 0;
@@ -590,8 +587,7 @@ body {
         background: url("../img/portfolio-5-big.jpg");
       }
       &__slides {
-        display: flex;
-        justify-content: space-between;
+        @include flexSpaceBetw;
         margin-top: 10px;
         div {
           width: 130px;
@@ -612,8 +608,7 @@ body {
         }
       }
       &__slides-2 {
-        display: flex;
-        justify-content: space-between;
+        @include flexSpaceBetw;
         margin-top: 10px;
         div {
           width: 116px;
@@ -660,8 +655,7 @@ body {
   }
   div {
     width: 1130px;
-    display: flex;
-    justify-content: space-between;
+    @include flexSpaceBetw;
     margin-bottom: 70px;
   }
   img {
@@ -707,12 +701,10 @@ body {
     height: 1410px;
     margin: 0 auto;
     padding-top: 70px;
-    display: flex;
-    justify-content: space-between;
+    @include flexSpaceBetw;
     &__posts {
       width: 750px;
-      display: flex;
-      justify-content: space-between;
+      @include flexSpaceBetw;
       align-items: center;
       flex-wrap: wrap;
       div {
@@ -782,8 +774,7 @@ body {
         }
       }
       &__left, &__right {
-        display: flex;
-        justify-content: space-between;
+        @include flexSpaceBetw;
         flex-direction: column;
         div {
         box-shadow: 0 0 5px 2px #959595;
@@ -800,9 +791,8 @@ body {
       width: 360px;
       height: 1000px;
       margin: 50px 0;
-      display: flex;
+      @include flexSpaceBetw;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
       background: #FAFAFA;
       &__unit {
@@ -828,18 +818,15 @@ body {
         }
       }
       &__posts {
-        display: flex;
+        @include flexSpaceBetw;
         flex-direction: column;
-        justify-content: space-between;
         height: 335px;
         & > div {
-          display: flex;
-          justify-content: space-between;
+          @include flexSpaceBetw;
           cursor: pointer;
           div {
-            display: flex;
+            @include flexSpaceBetw;
             flex-direction: column;
-            justify-content: space-between;
             margin-left: 20px;
             h3 {
               font-weight: 400;
@@ -942,8 +929,7 @@ body {
 .contact-info {
   &__content {
     width: 1140px;
-    display: flex;
-    justify-content: space-between;
+    @include flexSpaceBetw;
     margin: 0 auto 80px;
     padding-top: 80px;
     &__text {
@@ -985,8 +971,7 @@ body {
     &__form {
       width: 750px;
       div {
-        display: flex;
-        justify-content: space-between;
+        @include flexSpaceBetw;
         margin: 0 0 30px;
         input {
           border: 1px solid #959595;
@@ -1052,8 +1037,7 @@ body {
   &__menu {
     width: 1140px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    @include flexSpaceBetw;
     div {
       width: 355px;
       h4 {
