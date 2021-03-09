@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@300;400;700&display=swap');
-
+@mixin flexCentrCentr() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin font300-14 {
+  font-weight: 300;
+  font-size: 14px;
+}
 body {
   margin: 0 auto !important;
   max-width: 1600px;
@@ -80,15 +88,11 @@ body {
 }
 .main-bar {
   height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexCentrCentr;
   &__content {
     width: 1140px;
     height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCentrCentr;
     font-weight: 700;
     font-size: 14px;
     border-top: 1px solid #DADADA;
@@ -110,9 +114,7 @@ body {
 .main-gallery {
   height: 1400px;
   &__content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCentrCentr;
     &__left {
       display: flex;
       flex-direction: column;
@@ -203,9 +205,7 @@ body {
     width: 125px;
     border-radius: 5px;
     color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCentrCentr;
     margin: 40px auto 0;
     font-weight: 700;
     font-size: 13px;
@@ -268,8 +268,7 @@ body {
         text-transform: uppercase;
       }
       p {
-        font-weight: 300;
-        font-size: 14px;
+        @include font300-14;
         margin: 0 0 40px;
       }
       &__details {
@@ -314,9 +313,7 @@ body {
             height: 20px;
             background: #000000;
             top: -35px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flexCentrCentr;
             color: white;
             font-size: 12px;
             font-weight: 400;
@@ -364,8 +361,7 @@ body {
     margin: 0;
   }
   h2 + p {
-    font-weight: 300;
-    font-size: 14px;
+    @include font300-14;
     line-height: 30px;
     text-align: center;
     width: 45%;
@@ -392,8 +388,7 @@ body {
         color: #959595;
       }
       p {
-        font-weight: 300;
-        font-size: 14px;
+        @include font300-14;
         margin: 0 0 25px 35px;
         color: #959595;
       }
@@ -657,8 +652,7 @@ body {
     text-transform: uppercase;
   }
   p {
-    font-weight: 300;
-    font-size: 14px;
+    @include font300-14;
     line-height: 30px;
     width: 45%;
     text-align: center;
@@ -728,9 +722,7 @@ body {
         background: url("../img/blog-post-4.jpg");
         width: 360px;
         height: 245px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexCentrCentr;
         svg {
           fill: #ffffff;
           display: none;
@@ -748,9 +740,7 @@ body {
         background: #000000;
         border-radius: 2px;
         color: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexCentrCentr;
         margin: 40px 0 0 45px;
         text-transform: uppercase;
         font-size: 13px;
@@ -820,9 +810,7 @@ body {
         height: 40px;
         width: 100%;
         background: #E1E1E1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexCentrCentr;
         font-weight: 300;
         font-size: 18px;
         letter-spacing: .4em;
@@ -873,9 +861,7 @@ body {
         height: 115px;
         width: 80%;
         div {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include flexCentrCentr;
           height: 30px;
           border-radius: 2px;
           font-weight: 400;
@@ -910,9 +896,7 @@ body {
     width: 124px;
     height: 30px;
     margin: 50px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCentrCentr;
     background: #959595;
     color: #ffffff;
     font-weight: 400;
@@ -1023,9 +1007,7 @@ body {
         width: 220px;
         height: 40px;
         border-radius: 2px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexCentrCentr;
         background: #000000;
         color: #ffffff;
         font-weight: 700;
@@ -1060,8 +1042,7 @@ body {
   }
   p {
     width: 35%;
-    font-size: 14px;
-    font-weight: 300;
+    @include font300-14;
     line-height: 30px;
     color: #959595;
     text-align: center;
@@ -1083,8 +1064,7 @@ body {
         margin: 25px 0 40px;
       }
       p {
-        font-weight: 300;
-        font-size: 14px;
+        @include font300-14;
         color: #959595;
         text-align: left;
         width: 95%;
@@ -1102,9 +1082,7 @@ body {
     padding-top: 50px;
   }
   &__social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCentrCentr;
     margin: 40px auto 35px;
     width: 1140px;
     border-top: 1px solid #959595;

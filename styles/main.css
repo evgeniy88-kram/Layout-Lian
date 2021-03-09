@@ -84,8 +84,8 @@ body {
   width: 1140px;
   height: 60px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   font-weight: 700;
   font-size: 14px;
   border-top: 1px solid #DADADA;
@@ -1051,8 +1051,8 @@ body {
 }
 .contact-values p {
   width: 35%;
-  font-size: 14px;
   font-weight: 300;
+  font-size: 14px;
   line-height: 30px;
   color: #959595;
   text-align: center;
