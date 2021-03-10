@@ -697,12 +697,12 @@ body {
 .portfolio__details__item__gallery__poster {
   width: 550px;
   height: 350px;
-  background: url("../img/portfolio-1-big.jpg");
+  background-image: url("../img/portfolio-1-big.jpg");
 }
 .portfolio__details__item__gallery__poster-2 {
   width: 485px;
   height: 514px;
-  background: url("../img/portfolio-5-big.jpg");
+  background-image: url("../img/portfolio-5-big.jpg");
 }
 .portfolio__details__item__gallery__slides {
   display: flex;

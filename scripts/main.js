@@ -67,8 +67,22 @@ for (let i = 0; i < 2; i++) {
     });
 }
 
+let slides = document.getElementsByClassName('portfolio__details__item__gallery__slides__ex'),
+    poster1 = document.getElementsByClassName('portfolio__details__item__gallery__poster'),
+    poster2 = document.getElementsByClassName('portfolio__details__item__gallery__poster-2');
 
-
+for (let i = 0; i < slides.length; i++) {
+    if (i < 4) {
+        slides[i].addEventListener('click', function (){
+            poster1[0].style.cssText = `background-image: url("./img/portfolio-${i+1}-big.jpg");`;
+        });
+    }
+    if (i >= 4) {
+        slides[i].addEventListener('click', function (){
+            poster2[0].style.cssText = `background-image: url("./img/portfolio-${i+1}-big.jpg");`;
+        });
+    }
+}
 
         // Карта Google
 function initMap() {
