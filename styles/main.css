@@ -17,9 +17,112 @@ body {
   margin: 0 auto;
   padding-top: 30px;
 }
+@media screen and (max-width: 1030px) {
+  .header__container {
+    width: 900px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .header__container {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .header__container {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .header__container {
+    width: 340px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .header__container {
+    width: 280px;
+  }
+}
+.header__container #hamburger {
+  display: none;
+}
+.header__container #hamburger + label {
+  display: none;
+  width: 42px;
+  height: 42px;
+}
+@media screen and (max-width: 380px) {
+  .header__container #hamburger + label {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 20px;
+    margin: 40px auto;
+  }
+}
+.header__container #hamburger + label span {
+  width: 30px;
+  height: 3px;
+  background: #000000;
+  display: block;
+  position: relative;
+  margin: auto;
+  transition: 0.5s;
+}
+.header__container #hamburger + label span:before, .header__container #hamburger + label span:after {
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  display: block;
+  background: #000000;
+}
+.header__container #hamburger + label span:before {
+  top: -10px;
+}
+.header__container #hamburger + label span:after {
+  bottom: -10px;
+}
+.header__container #hamburger:checked + label span {
+  background: transparent;
+  transform: rotate(180deg);
+}
+.header__container #hamburger:checked + label span:before, .header__container #hamburger:checked + label span:after {
+  top: 50%;
+  bottom: initial;
+  width: 110%;
+  background: #000000;
+}
+.header__container #hamburger:checked + label span:before {
+  transform: rotate(45deg);
+}
+.header__container #hamburger:checked + label span:after {
+  transform: rotate(-45deg);
+}
+.header__container .nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  position: absolute;
+  height: 160px;
+  top: 60px;
+  right: 0;
+  margin: 20px auto;
+  background: #ffffff;
+  overflow: auto;
+  z-index: 999;
+}
 .header__container__nav nav {
   display: flex;
   justify-content: space-around;
+}
+@media screen and (max-width: 380px) {
+  .header__container__nav nav {
+    display: none;
+  }
 }
 .header__container__nav nav a {
   position: relative;
@@ -28,6 +131,17 @@ body {
   color: #000000;
   font-size: 14px;
   font-weight: 700;
+}
+@media screen and (max-width: 770px) {
+  .header__container__nav nav a {
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .header__container__nav nav a {
+    margin: 0 5px;
+    font-size: 11px;
+  }
 }
 .header__container__nav nav a::before {
   content: "";
@@ -1101,10 +1215,40 @@ body {
   border-top: 1px solid #959595;
   border-bottom: 1px solid #959595;
 }
+@media screen and (max-width: 1030px) {
+  .footer__social {
+    width: 900px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .footer__social {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .footer__social {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .footer__social {
+    width: 340px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .footer__social {
+    width: 280px;
+  }
+}
 .footer__social i {
   margin: 15px;
   cursor: pointer;
   color: #959595;
+}
+@media screen and (max-width: 330px) {
+  .footer__social i {
+    margin: 10px;
+  }
 }
 .footer__social i:hover {
   color: black;
@@ -1113,6 +1257,11 @@ body {
   text-align: center;
   font-weight: 700;
   margin: 0;
+}
+@media screen and (max-width: 330px) {
+  .footer p {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

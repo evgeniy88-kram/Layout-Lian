@@ -1,14 +1,15 @@
 ;(function($){
     $(function (){
         // // Toggle mobile-menu
-        // $('header label').on('click', function () {
-        //     $('nav').toggleClass('nav__list');
-        // });
-        // //Hide toggle-menu
-        // $('nav a').on('click', function (){
-        //     $('nav').toggleClass('nav__list');
-        //     $('#hamburger').prop('checked', false);
-        // });
+        let nav = document.getElementsByTagName('nav');
+        $('.header__container__nav label').on('click', function () {
+            $('nav').toggleClass('nav__list');
+        });
+        //Hide toggle-menu
+        $('nav a').on('click', function (){
+            $('nav').toggleClass('nav__list');
+            $('#hamburger').prop('checked', false);
+        });
         // //
         //Slick-slider
         $('.main-represent__slider').slick({
@@ -36,33 +37,35 @@
             // }]
         });
 
-        let portfolioSlide1 = document.getElementById('portfolioSlide1'),
-            portfolioSlide2 = document.getElementById('portfolioSlide2'),
-            previousMenu = document.getElementById('left'),
-            nextMenu = document.getElementById('right'),
-            navigation = [nextMenu, previousMenu],
-            j = 1,
-            shareBtn = document.getElementsByClassName('portfolio__details__item__text__share'),
-            shareIcons = document.getElementsByClassName('shared-icons')    ;
-        for (let i = 0; i < 2; i++) {
-            navigation[i].addEventListener('click', function () {
-                j++;
-                if (j % 2 === 0){
-                    portfolioSlide1.style.display = 'none';
-                    portfolioSlide2.style.display = 'flex';
-                }
-                else {
-                    portfolioSlide1.style.display = 'flex';
-                    portfolioSlide2.style.display = 'none';
-                }
-            });
-            shareBtn[i].addEventListener('click', function () {
-                shareIcons[i].style.display = 'flex';
-            });
-        }
-
     });
+
 })(jQuery);
+
+let portfolioSlide1 = document.getElementById('portfolioSlide1'),
+    portfolioSlide2 = document.getElementById('portfolioSlide2'),
+    previousMenu = document.getElementById('left'),
+    nextMenu = document.getElementById('right'),
+    navigation = [previousMenu, nextMenu],
+    j = 1,
+    shareBtn = document.getElementsByClassName('portfolio__details__item__text__share'),
+    shareIcons = document.getElementsByClassName('shared-icons');
+
+for (let i = 0; i < 2; i++) {
+    navigation[i].addEventListener('click', function () {
+        j++;
+        if (j % 2 === 0){
+            portfolioSlide1.style.display = 'none';
+            portfolioSlide2.style.display = 'flex';
+        }
+        else {
+            portfolioSlide1.style.display = 'flex';
+            portfolioSlide2.style.display = 'none';
+        }
+    });
+    shareBtn[i].addEventListener('click', function () {
+        shareIcons[i].style.display = 'flex';
+    });
+}
 
 
 
