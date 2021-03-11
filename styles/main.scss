@@ -156,7 +156,7 @@ body {
 .main-represent {
   &__slider {
     &--item {
-      width: 1600px;
+      max-width: 1600px;
       h2, p {
         text-align: center;
         font-weight: 300;
@@ -169,12 +169,31 @@ body {
         letter-spacing: .1em;
         width: 700px;
         margin: 260px auto 35px;
+        @media screen and (max-width: 770px) {
+          font-size: 38px;
+          width: 550px;
+        }
+        @media screen and (max-width: 430px) {
+          font-size: 28px;
+          width: 400px;
+        }
+        @media screen and (max-width: 380px) {
+          font-size: 23px;
+          width: 310px;
+        }
       }
       p {
         font-size: 18px;
         color: black;
         letter-spacing: .4em;
         margin: 0;
+        @media screen and (max-width: 430px) {
+          font-size: 14px;
+          letter-spacing: .2em;
+        }
+        @media screen and (max-width: 380px) {
+          font-size: 12px;
+        }
       }
     }
     div:nth-child(1) {
@@ -198,14 +217,45 @@ body {
     font-size: 14px;
     border-top: 1px solid #DADADA;
     border-bottom: 1px solid #DADADA;
+    @media screen and (max-width: 1030px) {
+      width: 950px;
+    }
+    @media screen and (max-width: 770px) {
+      width: 730px;
+    }
+    @media screen and (max-width: 430px) {
+      width: 410px;
+      height: 50px;
+      font-size: 10px;
+    }
+    @media screen and (max-width: 380px) {
+      width: 370px;
+      font-size: 8px;
+    }
+    @media screen and (max-width: 330px) {
+      width: 320px;
+      font-size: 8px;
+    }
     &--line {
       border: 1px solid #DADADA;
       width: 0;
       height: 30px;
       transform: rotate(25deg);
+      @media screen and (max-width: 380px) {
+        transform: rotate(10deg);
+      }
     }
     div {
       margin: 0 20px;
+      @media screen and (max-width: 770px) {
+        margin: 0 10px;
+      }
+      @media screen and (max-width: 430px) {
+        margin: 0 5px;
+      }
+      @media screen and (max-width: 330px) {
+        margin: 0 4px;
+      }
     }
     div:nth-child(2n-1) {
       cursor: pointer;
@@ -214,86 +264,172 @@ body {
 }
 .main-gallery {
   height: 1400px;
+  @media screen and (max-width: 1030px) {
+    height: 1167px;
+  }
+  @media screen and (max-width: 770px) {
+    height: 875px;
+  }
+  @media screen and (max-width: 430px) {
+    height: 2330px;
+  }
   &__content {
     @include flexCentrCentr;
-    &__left {
-      @include flexSpaceBetw;
+    @media screen and (max-width: 430px) {
       flex-direction: column;
-      height: 1115px;
-      div {
-        width: 360px;
-        cursor: pointer;
+      justify-content: space-between;
+      height: 2250px;
+    }
+    &__left div, &__center div, &__right div {
+      width: 360px;
+      cursor: pointer;
+      @media screen and (max-width: 1030px) {
+        width: 300px;
       }
-      div:hover {
+      @media screen and (max-width: 770px) {
+        width: 225px;
+      }
+      &:hover {
         box-shadow: 0 0 5px 5px #959595;
         transition: all .5s ease-in-out;
       }
+    }
+    &__left, &__center, &__right {
+      @include flexSpaceBetw;
+      flex-direction: column;
+    }
+    &__left, &__right {
+      height: 1115px;
+      @media screen and (max-width: 1030px) {
+        height: 929px;
+      }
+      @media screen and (max-width: 770px) {
+        height: 697px;
+      }
+    }
+    &__left {
       div:nth-child(1) {
-        background: url("../img/gallery-1.jpg");
+        background: url("../img/gallery-1.jpg") no-repeat;
+        background-size: cover;
         height: 350px;
+        @media screen and (max-width: 1030px) {
+          height: 292px;
+        }
+        @media screen and (max-width: 770px) {
+          height: 219px;
+        }
       }
       div:nth-child(2) {
-        background: url("../img/gallery-2.jpg");
+        background: url("../img/gallery-2.jpg") no-repeat;
+        background-size: cover;
         height: 250px;
+        @media screen and (max-width: 1030px) {
+          height: 208px;
+        }
+        @media screen and (max-width: 770px) {
+          height: 156px;
+        }
       }
       div:nth-child(3) {
-        background: url("../img/gallery-3.jpg");
+        background: url("../img/gallery-3.jpg") no-repeat;
+        background-size: cover;
         height: 450px;
+        @media screen and (max-width: 1030px) {
+          height: 375px;
+        }
+        @media screen and (max-width: 770px) {
+          height: 281px;
+        }
       }
     }
     &__center {
-      @include flexSpaceBetw;
-      flex-direction: column;
       height: 1300px;
       margin: 0 30px;
-      div {
-        width: 360px;
-        cursor: pointer;
+      @media screen and (max-width: 1030px) {
+        margin: 0 20px;
+        height: 1080px;
       }
-      div:hover {
-        box-shadow: 0 0 5px 5px #959595;
-        transition: all .5s ease-in-out;
+      @media screen and (max-width: 770px) {
+        height: 810px;
       }
       div:nth-child(1) {
-        background: url("../img/gallery-4.jpg");
+        background: url("../img/gallery-4.jpg") no-repeat;
+        background-size: cover;
         height: 250px;
+        @media screen and (max-width: 1030px) {
+          height: 208px;
+        }
+        @media screen and (max-width: 770px) {
+          height: 156px;
+        }
       }
       div:nth-child(2) {
-        background: url("../img/gallery-5.jpg");
+        background: url("../img/gallery-5.jpg") no-repeat;
+        background-size: cover;
         height: 350px;
+        @media screen and (max-width: 1030px) {
+          height: 292px;
+        }
+        @media screen and (max-width: 770px) {
+          height: 219px;
+        }
       }
       div:nth-child(3) {
-        background: url("../img/gallery-6.jpg");
+        background: url("../img/gallery-6.jpg") no-repeat;
+        background-size: cover;
         height: 250px;
+        @media screen and (max-width: 1030px) {
+          height: 208px;
+        }
+        @media screen and (max-width: 770px) {
+          height: 156px;
+        }
       }
       div:nth-child(4) {
-        background: url("../img/gallery-7.jpg");
+        background: url("../img/gallery-7.jpg") no-repeat;
+        background-size: cover;
         height: 350px;
+        @media screen and (max-width: 1030px) {
+          height: 292px;
+        }
+        @media screen and (max-width: 770px) {
+          height: 219px;
+        }
       }
     }
     &__right {
-      @include flexSpaceBetw;
-      flex-direction: column;
-      height: 1115px;
-      div {
-        width: 360px;
-        cursor: pointer;
-      }
-      div:hover {
-        box-shadow: 0 0 5px 5px #959595;
-        transition: all .5s ease-in-out;
-      }
       div:nth-child(1) {
-        background: url("../img/gallery-8.jpg");
+        background: url("../img/gallery-8.jpg") no-repeat;
+        background-size: cover;
         height: 430px;
+        @media screen and (max-width: 1030px) {
+          height: 358px;
+        }
+        @media screen and (max-width: 770px) {
+          height: 269px;
+        }
       }
       div:nth-child(2) {
-        background: url("../img/gallery-9.jpg");
+        background: url("../img/gallery-9.jpg") no-repeat;
+        background-size: cover;
         height: 250px;
+        @media screen and (max-width: 1030px) {
+          height: 208px;
+        }
+        @media screen and (max-width: 770px) {
+          height: 156px;
+        }
       }
       div:nth-child(3) {
-        background: url("../img/gallery-10.jpg");
+        background: url("../img/gallery-10.jpg") no-repeat;
+        background-size: cover;
         height: 350px;
+        @media screen and (max-width: 1030px) {
+          height: 292px;
+        }
+        @media screen and (max-width: 770px) {
+          height: 219px;
+        }
       }
     }
   }
@@ -308,6 +444,9 @@ body {
     font-weight: 700;
     font-size: 13px;
     cursor: pointer;
+    @media screen and (max-width: 770px) {
+      margin: 30px auto 0;
+    }
     &:hover {
       color: #959595;
       background: #DADADA;

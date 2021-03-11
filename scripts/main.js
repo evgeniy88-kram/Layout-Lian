@@ -1,7 +1,6 @@
 ;(function($){
     $(function (){
         // // Toggle mobile-menu
-        let nav = document.getElementsByTagName('nav');
         $('.header__container__nav label').on('click', function () {
             $('nav').toggleClass('nav__list');
         });
@@ -10,7 +9,7 @@
             $('nav').toggleClass('nav__list');
             $('#hamburger').prop('checked', false);
         });
-        // //
+        ////
         //Slick-slider
         $('.main-represent__slider').slick({
             // autoplay:true,
@@ -18,23 +17,11 @@
             arrows:true,
             dots: true,
             slidesToShow: 1,
-            slidesToScroll: 1
-            // responsive: [{
-            //     breakpoint: 1250,
-            //     settings: {
-            //         slidesToShow: 2,
-            //         slidesToScroll: 1,
-            //         arrows: false
-            //     }
-            //     },
-            //     {
-            //         breakpoint: 900,
-            //         settings: {
-            //             slidesToShow: 1,
-            //             slidesToScroll: 1,
-            //             arrows: false
-            //         }
-            // }]
+            slidesToScroll: 1,
+            responsive: [{
+                breakpoint: 430,
+                settings: {arrows: false}
+            }]
         });
 
     });
