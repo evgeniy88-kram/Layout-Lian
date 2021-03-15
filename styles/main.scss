@@ -1317,13 +1317,6 @@ body {
 }
 .blog-main  {
   background: #FAFAFA;
-  height: 1600px;
-  @media screen and (max-width: 1030px) {
-    height: 2300px;
-  }
-  @media screen and (max-width: 430px) {
-    height: 3750px;
-  }
   &__content {
     width: 1140px;
     margin: 0 auto;
@@ -1331,7 +1324,6 @@ body {
     @include flexSpaceBetw;
     @media screen and (max-width: 1030px) {
       width: 950px;
-      height: 2100px;
       flex-wrap: wrap;
       padding-top: 30px;
     }
@@ -1343,6 +1335,9 @@ body {
     }
     @media screen and (max-width: 380px) {
       width: 360px;
+    }
+    @media screen and (max-width: 330px) {
+      width: 310px;
     }
     &__posts {
       width: 750px;
@@ -1367,12 +1362,28 @@ body {
         @media screen and (max-width: 380px) {
           width: 340px;
         }
+        @media screen and (max-width: 330px) {
+          width: 300px;
+        }
+        img {
+          @media screen and (max-width: 380px) {
+            width: 100%;
+          }
+        }
       }
       #blog-video  {
         background: url("../img/blog-post-4.jpg");
         width: 360px;
         height: 245px;
         @include flexCentrCentr;
+        @media screen and (max-width: 380px) {
+          width: 340px;
+          height: 231px;
+        }
+        @media screen and (max-width: 330px) {
+          width: 300px;
+          height: 204px;
+        }
         svg {
           fill: #ffffff;
           display: none;
@@ -1400,12 +1411,18 @@ body {
         font-size: 20px;
         margin: 30px 0 20px 45px;
         width: 70%;
+        @media screen and (max-width: 330px) {
+          font-size: 16px;
+        }
       }
       h4 {
         font-weight: 400;
         font-size: 13px;
         margin: 0 0 30px 45px;
         color: #959595;
+        @media screen and (max-width: 330px) {
+          font-size: 12px;
+        }
         i {
           margin-right: 5px;
         }
@@ -1438,20 +1455,14 @@ body {
           margin: 20px auto;
         }
         div {
-        box-shadow: 0 0 5px 2px #959595;
+        box-shadow: 0 0 2px 2px #959595;
         }
-      }
-      &__left {
-        height: 1315px;
-      }
-      &__right {
-        height: 1410px;
       }
     }
     &__sidebar {
       width: 360px;
       height: 1000px;
-      margin: 50px 0;
+      margin: 50px 0 0;
       @include flexSpaceBetw;
       flex-direction: column;
       align-items: center;
@@ -1466,7 +1477,10 @@ body {
         width: 740px;
       }
       @media screen and (max-width: 430px) {
-        width: 95%;
+        width: 100%;
+      }
+      @media screen and (max-width: 380px) {
+        margin: 20px 0 0;
       }
       &__unit {
         position: relative;
@@ -1499,11 +1513,20 @@ body {
           flex-wrap: wrap;
           height: 250px;
         }
+        @media screen and (max-width: 330px) {
+          flex-direction: column;
+          align-items: center;
+          height: 330px;
+        }
         & > div {
           @include flexSpaceBetw;
           cursor: pointer;
           @media screen and (max-width: 770px) {
             width: 50%;
+          }
+          @media screen and (max-width: 380px) {
+            width: 80%;
+            justify-content: space-around;
           }
           div {
             @include flexSpaceBetw;
@@ -1521,6 +1544,9 @@ body {
               @media screen and (max-width: 430px) {
                 font-size: 14px;
               }
+              @media screen and (max-width: 330px) {
+                font-size: 12px;
+              }
             }
             p {
               font-weight: 300;
@@ -1529,6 +1555,9 @@ body {
               color: #959595;
               @media screen and (max-width: 430px) {
                 font-size: 12px;
+              }
+              @media screen and (max-width: 330px) {
+                font-size: 10px;
               }
             }
           }
@@ -1577,10 +1606,11 @@ body {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 5px;
         @media screen and (max-width: 1030px) {
-          margin: 20px auto;
+          margin: 15px auto;
+          grid-template-columns: repeat(9, 1fr);
+        }
+        @media screen and (max-width: 770px) {
           grid-template-columns: repeat(5, 1fr);
-          grid-template-rows: repeat(2, 1fr);
-          gap: 10px;
         }
         @media screen and (max-width: 430px) {
           grid-template-rows: repeat(3, 1fr);
@@ -1599,7 +1629,7 @@ body {
   &__btn {
     width: 124px;
     height: 30px;
-    margin: 50px auto;
+    margin: 30px auto 0;
     @include flexCentrCentr;
     background: #959595;
     color: #ffffff;
@@ -1608,6 +1638,12 @@ body {
     text-transform: uppercase;
     border-radius: 2px;
     cursor: pointer;
+    @media screen and (max-width: 430px) {
+      margin: 60px auto 0;
+    }
+    @media screen and (max-width: 330px) {
+      margin: 140px auto 0;
+    }
     &:hover {
       color: #959595;
       background: #DADADA;
@@ -1634,12 +1670,37 @@ body {
       width: 440px;
       text-align: center;
       margin: 0 0 0 230px;
+      @media screen and (max-width: 1030px) {
+        margin: 0 auto;
+      }
+      @media screen and (max-width: 770px) {
+        font-size: 38px;
+        width: 550px;
+      }
+      @media screen and (max-width: 430px) {
+        font-size: 28px;
+        width: 400px;
+      }
+      @media screen and (max-width: 380px) {
+        font-size: 23px;
+        width: 310px;
+      }
     }
     p {
       font-size: 18px;
       color: black;
       letter-spacing: .4em;
       margin: 40px 0 0 230px;
+      @media screen and (max-width: 1030px) {
+        margin: 40px auto 0;
+      }
+      @media screen and (max-width: 430px) {
+        font-size: 14px;
+        letter-spacing: .2em;
+      }
+      @media screen and (max-width: 380px) {
+        font-size: 12px;
+      }
     }
   }
 }
@@ -1649,6 +1710,15 @@ body {
     @include flexSpaceBetw;
     margin: 0 auto 80px;
     padding-top: 80px;
+    @media screen and (max-width: 1030px) {
+      width: 90%;
+    }
+    @media screen and (max-width: 430px) {
+      padding-top: 30px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
     &__text {
       h3 {
         font-weight: 300;
@@ -1656,23 +1726,45 @@ body {
         letter-spacing: .4em;
         margin: 0 0 15px;
         text-transform: uppercase;
+        @media screen and (max-width: 1030px) {
+          font-size: 24px;
+          letter-spacing: .2em;
+        }
+        @media screen and (max-width: 430px) {
+          font-size: 20px;
+        }
       }
       h4 {
         font-weight: 300;
         letter-spacing: .025em;
         margin: 0 0 20px;
+        @media screen and (max-width: 1030px) {
+          font-size: 13px;
+        }
+        @media screen and (max-width: 430px) {
+          font-size: 12px;
+        }
       }
       div {
         height: 0;
         width: 60px;
         border-bottom: 2px solid #000000;
         margin: 0 0 40px;
+        @media screen and (max-width: 430px) {
+          margin: 0 0 20px;
+        }
       }
       p {
         font-weight: 300;
         font-size: 15px;
         letter-spacing: .025em;
         color: #959595;
+        @media screen and (max-width: 1030px) {
+          font-size: 12px;
+        }
+        @media screen and (max-width: 770px) {
+          font-size: 11px;
+        }
         span {
           font-weight: 700;
           color: #000000;
@@ -1687,6 +1779,21 @@ body {
     }
     &__form {
       width: 750px;
+      @media screen and (max-width: 1030px) {
+        width: 550px;
+      }
+      @media screen and (max-width: 770px) {
+        width: 400px;
+      }
+      @media screen and (max-width: 430px) {
+        margin: 30px 0 0;
+      }
+      @media screen and (max-width: 380px) {
+        width: 340px;
+      }
+      @media screen and (max-width: 330px) {
+        width: 280px;
+      }
       div {
         @include flexSpaceBetw;
         margin: 0 0 30px;
@@ -1695,6 +1802,18 @@ body {
           width: 340px;
           height: 40px;
           padding: 0 0 0 20px;
+          @media screen and (max-width: 1030px) {
+            width: 230px;
+          }
+          @media screen and (max-width: 770px) {
+            width: 170px;
+          }
+          @media screen and (max-width: 380px) {
+            width: 145px;
+          }
+          @media screen and (max-width: 330px) {
+            width: 110px;
+          }
         }
       }
       textarea {
@@ -1704,6 +1823,18 @@ body {
         padding: 20px 0 0 20px;
         margin: 0 0 30px;
         resize: none;
+        @media screen and (max-width: 1030px) {
+          width: 530px;
+        }
+        @media screen and (max-width: 770px) {
+          width: 380px;
+        }
+        @media screen and (max-width: 380px) {
+          width: 320px;
+        }
+        @media screen and (max-width: 330px) {
+          width: 260px;
+        }
       }
       button {
         width: 220px;
@@ -1716,6 +1847,12 @@ body {
         font-size: 14px;
         text-transform: uppercase;
         cursor: pointer;
+        @media screen and (max-width: 770px) {
+          width: 180px;
+        }
+        @media screen and (max-width: 330px) {
+          width: 140px;
+        }
         &:hover {
           color: #000000;
           background: #ffffff;
@@ -1732,8 +1869,7 @@ body {
 }
 .contact-values {
   background: #FAFAFA;
-  height: 740px;
-  h3 {
+  h2 {
     font-weight: 400;
     font-size: 30px;
     letter-spacing: .4em;
@@ -1741,6 +1877,15 @@ body {
     text-align: center;
     text-transform: uppercase;
     margin: 0 0 35px;
+    @media screen and (max-width: 1030px) {
+      font-size: 24px;
+      letter-spacing: .1em;
+      padding-top: 30px;
+      margin: 0 0 20px;
+    }
+    @media screen and (max-width: 380px) {
+      font-size: 20px;
+    }
   }
   p {
     width: 35%;
@@ -1749,20 +1894,54 @@ body {
     color: #959595;
     text-align: center;
     margin: 0 auto 55px;
+    @media screen and (max-width: 1030px) {
+      font-size: 12px;
+      margin: 0 auto 20px;
+      width: 80%;
+    }
+    @media screen and (max-width: 430px) {
+      font-size: 11px;
+    }
   }
-
   &__menu {
     width: 1140px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     @include flexSpaceBetw;
+    @media screen and (max-width: 1030px) {
+      width: 95%;
+    }
+    @media screen and (max-width: 430px) {
+      flex-direction: column;
+      align-items: center;
+    }
     div {
       width: 355px;
+      @media screen and (max-width: 1030px) {
+        width: 280px;
+      }
+      @media screen and (max-width: 770px) {
+        width: 200px;
+      }
+      img {
+        @media screen and (max-width: 1030px) {
+          width: 280px;
+        }
+        @media screen and (max-width: 770px) {
+          width: 210px;
+        }
+      }
       h4 {
         font-weight: 400;
         font-size: 18px;
         letter-spacing: .4em;
         text-transform: uppercase;
         margin: 25px 0 40px;
+        @media screen and (max-width: 1030px) {
+          font-size: 16px;
+        }
+        @media screen and (max-width: 430px) {
+          margin: 15px 0;
+        }
       }
       p {
         @include font300-14;
@@ -1770,6 +1949,9 @@ body {
         text-align: left;
         width: 95%;
         margin: 0;
+        @media screen and (max-width: 1030px) {
+          font-size: 12px;
+        }
       }
     }
   }
