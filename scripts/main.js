@@ -1,13 +1,8 @@
 ;(function($){
     $(function (){
-        // // Toggle mobile-menu
+        //Toggle mobile-menu
         $('.header__container__nav label').on('click', function () {
             $('nav').toggleClass('nav__list');
-        });
-        //Hide toggle-menu
-        $('nav a').on('click', function (){
-            $('nav').toggleClass('nav__list');
-            $('#hamburger').prop('checked', false);
         });
         ////
         //Slick-slider
